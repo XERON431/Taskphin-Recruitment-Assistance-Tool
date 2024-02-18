@@ -5,7 +5,7 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 ## Table of Contents
 
 - [Features](#features)
-- - [Usage](#usage)
+- [Usage](#usage)
 - [Installation](#installation)
 - [Contributing](#contributing)
 - [License](#license)
