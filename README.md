@@ -66,7 +66,7 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 - npm install
 - cd ../server
 - npm install
-- 
+  
 ### Create .env File in server
 PORT, JWT_SECRET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION, AWS_API_VERSION, EMAIL_FROM, DB_CONNECTION_URL
 
