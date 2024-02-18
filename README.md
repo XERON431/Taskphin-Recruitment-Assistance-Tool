@@ -9,6 +9,7 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 - [Installation](#installation)
 - [Architecture](#architecture)
 - [Technologies](#technologies)
+- [Future Scope](#futurescope)
 
 
 ## Features
@@ -141,6 +142,7 @@ You can use a PostgreSQL database provided by render.com. Set up your database a
 - PostgresSQL - render.com
 - AWS-S3
 
+## Future Scope
 
 
 
