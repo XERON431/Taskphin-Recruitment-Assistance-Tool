@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/creator/image/create": "pages/creator/image/create.js",
+  "/newcandidates": "pages/newcandidates.js",
+  "/creator": "pages/creator.js",
+  "/login": "pages/login.js",
+  "/register": "pages/register.js",
+  "/candidate": "pages/candidate.js"
+}
