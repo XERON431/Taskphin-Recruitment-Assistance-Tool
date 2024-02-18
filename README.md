@@ -11,11 +11,20 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 - [Contributing](#contributing)
 - [License](#license)
 
+
 ## Features
 
-- **Global Candidate Showcase**: Job seekers can create profiles to showcase their skills and qualifications, increasing their visibility to recruiters from various organizations worldwide.
+- **Global Candidate Showcase**: Job seekers can create profiles to showcase their skills and qualifications, increasing their visibility to recruiters from various organizations worldwide. Candidates can put up their profiles without logging in.
 
-- **Candidate Management**: Recruiters can efficiently manage and track candidates for different roles and skill sets. The tool focuses on evaluating candidates with experience in Node.js and React.js.
+- **Dedicated Register and Login Panel for Recruiters**: Recruiters have a dedicated register and login panel to access the platform, allowing for secure management of candidate applications.
+
+- **Searchable Global Candidate Showcase**: The global candidate showcase displays all verified candidates available for hiring. It features a search box that returns candidates matching the search text most appropriately. Recruiters can save candidates for further tracking and updating.
+
+- **Candidate Information Management**: Recruiters can update each candidate's information, including application status, directly from the platform. 
+
+- **Recruiter Dashboard**: Each recruiter has a dedicated dashboard where saved candidates are presented, allowing them to track candidates and manage their applications efficiently.
+
+- **Candidate Management Dashboard**: Recruiters have access to a candidate management dashboard, where they can view and manage candidates' applications they've created.
 
 - **Candidate Lifecycle Management**: The tool facilitates managing candidates through different stages of recruitment, including:
   - Listed
