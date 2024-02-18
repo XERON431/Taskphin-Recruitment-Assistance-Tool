@@ -93,10 +93,12 @@ You can use a PostgreSQL database provided by render.com. Set up your database a
 ## Registration and Login 
 Start by registering and logging in with email and password in the application to access the full features.
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/60e5f6e8-5b09-46b1-ac1c-7c79fb70fe9f)
+## Registration and Login 
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/e1078e54-ee3a-495e-aa9b-1260c9d94029)
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/9a38d0a0-7ff7-4d8a-908d-285d965a1d9a)
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/f3c4258d-efb8-4976-83a1-72f5f8666639)
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/e8c97cb2-97eb-4cd2-b133-f5230327c436)
+![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/32ac7cf3-f77b-4b6b-b34c-e0d855d89bd2)
 
 
 
