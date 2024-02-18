@@ -58,12 +58,37 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 5. Utilize advanced filtering and search functionalities to find candidates with specific skills or qualifications.
 
 
-
-
-
 ## Installation
 
-Provide instructions on how to install and set up your project. Include any prerequisites and installation steps necessary to get your project up and running.
-
-```bash
+### Install Dependencies
+cd recruitment-assistance/client
 npm install
+
+cd ../server
+npm install
+
+### Create .env File in server
+PORT=8001
+JWT_SECRET=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=
+AWS_API_VERSION=
+EMAIL_FROM=
+DB_CONNECTION_URL=
+
+ ### Start the Program
+Running Client Side
+cd ../client
+npm run dev
+
+### Running Server Side
+
+cd ../server
+npm start
+
+### Database Setup
+You can use a PostgreSQL database provided by render.com. Set up your database and replace the DB_CONNECTION_URL in the .env file with your database connection URL.
+
+## Registration and Login 
+Start by registering and logging in with email and password in the application to access the full features.
