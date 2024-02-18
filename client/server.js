@@ -15,7 +15,7 @@ app.prepare()
       server.use(
         '/api',
         createProxyMiddleware({
-          target: 'https://backend-deployment-taskphin.onrender.com', // Your server address
+          target: 'http://localhost:8001', // Your server address
           changeOrigin: true,
         })
       );
