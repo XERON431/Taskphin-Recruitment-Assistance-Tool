@@ -22,7 +22,7 @@ const CreatorIndex = () => {
   };
 
   // Style for some elements
-  const myStyle = { marginTop: "-15px", fontSize: "10px" };
+  const myStyle = { marginTop: "-15px", fontSize: "20px" };
 
   // Rendering component
   return (
@@ -36,11 +36,11 @@ const CreatorIndex = () => {
             <img
               src={image.image ? image.image.Location : "/1-8.jpg"}
               alt="Image Thumbnail"
-              style={{ width: "80px", height: "80px", borderRadius: "50%" }}
+              style={{ width: "180px", height: "180px" }}
             />
             <div style={{ marginLeft: "20px" }}>
               <Link href={`/creator/image/view/${image.slug}`} className="pointer">
-                <p style={{ color: "black", fontSize: "16px", marginBottom: "5px" }}><h5 className="pt-2">{image.name}</h5></p>
+                <p style={{ color: "black", fontSize: "16px", marginBottom: "5px" }}><h2 className="pt-2">{image.name}</h2></p>
               </Link>
               <br/>
               {image.published ? (

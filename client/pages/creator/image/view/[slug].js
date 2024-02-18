@@ -1,53 +1,66 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react'; // Import useContext from react
 import { useRouter } from 'next/router';
 import CreatorRoute from '../../../../components/routes/CreatorRoute';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import { FaEdit, FaToggleOn, FaTrash } from 'react-icons/fa'; // Import the delete icon
+import { Button, CircularProgress, Chip, Typography } from '@mui/material';
+import { FaEdit, FaToggleOn, FaTrash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import { Context } from "../../../../context/index.js";
 
 const ImageView = () => {
   const [image, setImage] = useState({});
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { slug } = router.query;
-
+  
+  const {state: {user}}=useContext(Context)
   useEffect(() => {
     loadImage();
   }, [slug]);
 
   const loadImage = async () => {
     try {
+      setLoading(true);
       const { data } = await axios.get(`/api/image/${slug}`);
       setImage(data);
+      setLoading(false);
     } catch (error) {
       console.error('Error loading image:', error);
+      setLoading(false);
     }
   };
 
-  const handlePublish = async (e, imageId) => {
+  const handlePublish = async (imageId) => {
     try {
       let answer = window.confirm('Are you sure you want to publish? It will be live.');
       if (!answer) return;
 
+      setLoading(true);
       const { data } = await axios.put(`/api/image/publish/${imageId}`);
       setImage(data);
+      setLoading(false);
       toast('Congratulations! Your Candidate is live!');
     } catch (err) {
       console.error('Error publishing candidate:', err);
+      setLoading(false);
       toast('Image publish failed. Try again.');
     }
   };
 
-  const handleUnpublish = async (e, imageId) => {
+  const handleUnpublish = async (imageId) => {
     try {
       let answer = window.confirm('Are you sure you want to unpublish?');
       if (!answer) return;
 
+      setLoading(true);
       const { data } = await axios.put(`/api/image/unpublish/${imageId}`);
       setImage(data);
+      setLoading(false);
       toast('Candidate is taken down from showcase!');
     } catch (err) {
       console.error('Error unpublishing image:', err);
+      setLoading(false);
       toast('Image unpublish failed. Try again.');
     }
   };
@@ -57,11 +70,14 @@ const ImageView = () => {
       let answer = window.confirm('Are you sure you want to delete this image?');
       if (!answer) return;
 
+      setLoading(true);
       await axios.delete(`/api/image/${imageId}`);
+      setLoading(false);
       toast('Image deleted successfully.');
-      router.push('/'); // Redirect to homepage after deletion
+      router.push('/');
     } catch (err) {
       console.error('Error deleting image:', err);
+      setLoading(false);
       toast('Image deletion failed. Try again.');
     }
   };
@@ -70,55 +86,117 @@ const ImageView = () => {
     <CreatorRoute>
       <div className="container-fluid pt-3">
         {image && (
-          <div className="container-fluid pt-1">
-            <div className="d align-items-center pt-2">
-              <img
-                src={image.image ? image.image.Location : '/1-8.jpg'}
-                alt="Image Thumbnail"
-              />
-              <div className="flex">
-                <div className="ml-3">
-                  <h5 className="text-primary">{image.name}</h5>
-                  <p style={{ fontSize: '10px' }}>{image.category}</p>
+          <div style={{ textAlign: 'center', background: '#000000', color: '#fff', padding: '20px' }}>
+            <div className="row">
+              <div className="col-md-8 p-4">
+                <Typography variant="h1" className="font-weight-bold" style={{ color: 'pink' }}>
+                  {image.name}
+                </Typography>
+                
+                <div className="mt-2">
+                  {image.category && (
+                    <Chip
+                      label={image.category}
+                      style={{ backgroundColor: '#03a9f4', color: '#fff', marginRight: '4px' }}
+                    />
+                  )}
+                  {image.currentStatus && (
+                    <Chip
+                      label={image.currentStatus}
+                      style={{ backgroundColor: '#ff0000', color: '#fff', marginRight: '4px' }}
+                    />
+                  )}
+                  {image.phone && (
+                    <Chip
+                      label={image.phone}
+                      style={{ backgroundColor: 'green', color: '#fff', marginRight: '4px' }}
+                    />
+                  )}
+                  {image.email && (
+                    <Chip
+                      label={image.email}
+                      style={{ backgroundColor: 'violet', color: 'white', marginRight: '4px' }}
+                    />
+                  )}
+                </div>
+                <hr/>
+                <br />
+                <br />
+                <Typography variant="body1" style={{ color: 'white' }}>
+                  {image.description && image.description.substring(1, 160)}...
+                </Typography>
+                <div className="mt-4">
+                  <Button
+                    className="mb-3 m-3"
+                    variant="contained"
+                    color="secondary"
+                    disabled={loading}
+                    onClick={() => {
+                      router.push(`/creator/image/edit/${slug}`);
+                    }}
+                  >
+                    <Typography variant="button" style={{ color: 'white' }}>
+                      Update status
+                    </Typography>
+                  </Button>
+                  {image.published ? (
+                    <Button
+                      className="mb-3 m-3"
+                      variant="contained"
+                      color="secondary"
+                      disabled={loading}
+                      onClick={() => handleUnpublish(image.id)}
+                    >
+                      <Typography variant="button" style={{ color: 'white' }}>
+                        Unpublish
+                      </Typography>
+                    </Button>
+                  ) : (
+                    <Button
+                      className="mb-3 m-3"
+                      variant="contained"
+                      color="secondary"
+                      disabled={loading}
+                      onClick={() => handlePublish(image.id)}
+                    >
+                      <Typography variant="button" style={{ color: 'white' }}>
+                        Publish
+                      </Typography>
+                    </Button>
+                  )}
+
+
+                  <Button
+                    className="mb-3 m-3"
+                    variant="contained"
+                    color="secondary"
+                    disabled={loading}
+                    onClick={() => handleDelete(image.id)}
+                  >
+                    <Typography variant="button" style={{ color: 'white' }}>
+                      Delete
+                    </Typography>
+                  </Button>
                 </div>
               </div>
-              <div className="align-items-right">
-                <FaEdit
-                  style={{
-                    cursor: 'pointer',
-                    marginRight: '10px',
-                    color: '#007bff',
-                    fontSize: '20px',
-                  }}
-                  onClick={() => {
-                    router.push(`/creator/image/edit/${slug}`);
-                  }}
+              <div className="col-md-4 p-4">
+                <img
+                  src={image.image ? image.image.Location : '/1-8.jpg'}
+                  alt={image.name}
+                  className="card-img-top"
+                  style={{ height: '500px', objectFit: 'cover' }}
                 />
-                <FaToggleOn
-                  style={{
-                    cursor: 'pointer',
-                    color: image.published ? '#4caf50' : '#d9534f', // Green if published, Red if not
-                    fontSize: '20px',
-                  }}
-                  onClick={(e) => (image.published ? handleUnpublish(e, image.id) : handlePublish(e, image.id))}
-                />
-                <FaTrash
-                  style={{
-                    cursor: 'pointer',
-                    color: '#d9534f', // Red color for delete button
-                    fontSize: '20px',
-                  }}
-                  onClick={() => handleDelete(image.id)}
-                />
+                <hr />
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  
+                </div>
               </div>
             </div>
-            <hr />
-            <div className="row">
-              <div className="col">
-                <ReactMarkdown>{image.description}</ReactMarkdown>
+            {loading && (
+              <div className="d-flex justify-content-center">
+                <CircularProgress color="secondary" />
               </div>
-            </div>
-            <br />
+            )}
           </div>
         )}
       </div>

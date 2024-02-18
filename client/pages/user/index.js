@@ -34,19 +34,20 @@ const UserIndex = () => {
             )}
             <h1 style={{ textAlign: "center", background: "#000000", color: "#fff", padding: "20px" }}>Saved Candidates</h1>
             {images && images.map(image => (
-                <div key={image.id} className="media pt-2 pb-1 flex">
-                    <div className="flex">
-                    <Link href={`/creator/image/view/${image.slug}`} className="pointer">
-                    <h5 className="mt-2 text-primary">{image.name}</h5></Link>
-                    <h5 className="mt-2">{image.currentStatus}</h5>
-                    </div>
+                <div key={image.id} style={{ display: "flex", alignItems: "center", padding: "10px" }}>
                     <img
                         className="mr-3 rounded"
                         src={image.image ? image.image.Location : '/background.jpg'}
                         alt={image.name}
                         style={{ width: '80px', height: '80px', objectFit: 'cover' }}
                     />
-                    <hr/>
+                    <div style={{ marginLeft: "20px" }}>
+                    <Link href={`/creator/image/view/${image.slug}`} className="pointer">
+                    <h5 className="mt-2 text-primary">{image.name}</h5></Link>
+                    <h5 className="mt-2">{image.currentStatus}</h5>
+                    </div>
+                    
+                    {/* <hr/> */}
                 </div>
             ))}
         </UserRoute>

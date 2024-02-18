@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     const[code,setCode]=useState('')
 
 
-
+    
     const {state: {user}}=useContext(Context)
 
 

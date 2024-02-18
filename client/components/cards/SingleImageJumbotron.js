@@ -58,21 +58,12 @@ const SingleImageJumbotron = ({ image, user, loading, handleFreeEnrollment, enro
           <Typography variant="body1" style={{ color: "white" }}>
             {image.description && image.description.substring(1, 160)}...
           </Typography>
-        </div>
-        <div className="col-md-4 p-4">
-          <img
-            src={image.image.Location}
-            alt={image.name}
-            className="card-img-top"
-            style={{ height: "500px", objectFit: "cover" }}
-          />
-          <hr />
           {loading ? (
             <div className="d-flex justify-content-center">
               <CircularProgress color="secondary" />
             </div>
           ) : (
-            <>
+            <div style={{ display: "flex", gap: "10px" }}> {/* Add flex container */}
               <Button
                 className="mb-3 mt-3"
                 variant="contained"
@@ -97,8 +88,18 @@ const SingleImageJumbotron = ({ image, user, loading, handleFreeEnrollment, enro
                   Delete
                 </Typography>
               </Button>
-            </>
+            </div>
           )}
+        </div>
+        <div className="col-md-4 p-4">
+          <img
+            src={image.image.Location}
+            alt={image.name}
+            className="card-img-top"
+            style={{ height: "500px", objectFit: "cover" }}
+          />
+          <hr />
+          
         </div>
       </div>
     </div>
