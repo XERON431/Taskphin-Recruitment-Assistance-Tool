@@ -117,6 +117,7 @@ You can use a PostgreSQL database provided by render.com. Set up your database a
   
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/35dd583a-257a-4f7b-8364-93ec2a7d9864)
 
+### CRUD Operations
 #### Publishing/Unpublishing Candidates to Global Showcase page
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/e1078e54-ee3a-495e-aa9b-1260c9d94029)
 
