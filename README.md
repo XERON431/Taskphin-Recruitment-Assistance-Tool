@@ -7,8 +7,8 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 - [Features](#features)
 - [Usage](#usage)
 - [Installation](#installation)
-- [Different Pages in the Website and Operations](#different Pages in the Website and Operations)
-- [License](#license)
+- [Architecture](#architecture)
+- [Technologies](#technologies)
 
 
 ## Features
@@ -81,7 +81,7 @@ PORT, JWT_SECRET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION, AWS_API_
 ### Database Setup
 You can use a PostgreSQL database provided by render.com. Set up your database and replace the DB_CONNECTION_URL in the .env file with your database connection URL.
 
-## Different Pages in the Website and Operations
+## Architecture
 ### Registration and Login 
 - Start by registering and logging in with email and password in the application to access the full features.
   
