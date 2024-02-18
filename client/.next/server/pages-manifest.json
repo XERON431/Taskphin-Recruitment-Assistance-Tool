@@ -1,9 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/candidate": "pages/candidate.js",
-  "/login": "pages/login.js",
-  "/user": "pages/user.js"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/candidate":"pages/candidate.html","/creator/image/edit/[slug]":"pages/creator/image/edit/[slug].html","/creator":"pages/creator.html","/login":"pages/login.html","/newcandidates":"pages/newcandidates.html","/creator/image/view/[slug]":"pages/creator/image/view/[slug].html","/user":"pages/user.html","/register":"pages/register.html","/forgot-password":"pages/forgot-password.html","/creator/image/create":"pages/creator/image/create.html","/":"pages/index.js","/image/[slug]":"pages/image/[slug].js","/_document":"pages/_document.js","/404":"pages/404.html"}
