@@ -2,6 +2,15 @@
 
 Recruitment Assistance is an all-purpose recruitment solution designed to streamline the hiring process for both job seekers and recruiters. It offers a comprehensive platform for managing candidates, evaluating their skills, and tracking their progress through different stages of recruitment.
 
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 - **Global Candidate Showcase**: Job seekers can create profiles to showcase their skills and qualifications, increasing their visibility to recruiters from various organizations worldwide.
@@ -42,13 +51,7 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 
 
 
-## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
