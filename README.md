@@ -129,6 +129,17 @@ You can use a PostgreSQL database provided by render.com. Set up your database a
 #### Deleting Candidates
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/5374819a-e907-4034-9c5c-710a5badc773)
 
+## Technologies
+### Frontend
+- Next.js
+- React
+### Backend
+- Node.js
+- Express.js
+### Database
+- PostgresSQL - render.com
+- AWS-S3
+
 
 
 
