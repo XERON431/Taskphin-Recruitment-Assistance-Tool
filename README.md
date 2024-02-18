@@ -61,31 +61,22 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 ## Installation
 
 ### Install Dependencies
-cd recruitment-assistance/client
-npm install
-
-cd ../server
-npm install
-
+- cd recruitment-assistance/client
+- npm install
+- cd ../server
+- npm install
+- 
 ### Create .env File in server
-PORT=8001
-JWT_SECRET=
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_REGION=
-AWS_API_VERSION=
-EMAIL_FROM=
-DB_CONNECTION_URL=
+PORT, JWT_SECRET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION, AWS_API_VERSION, EMAIL_FROM, DB_CONNECTION_URL
 
- ### Start the Program
-Running Client Side
-cd ../client
-npm run dev
+### Start the Program
+#### Running Client Side
+- cd ../client
+- npm run dev
 
-### Running Server Side
-
-cd ../server
-npm start
+#### Running Server Side
+- cd ../server
+- npm start
 
 ### Database Setup
 You can use a PostgreSQL database provided by render.com. Set up your database and replace the DB_CONNECTION_URL in the .env file with your database connection URL.
@@ -102,11 +93,15 @@ Candidates can create their profiles without logging in
 Showcases all the publsihed candidates with their score and hiring status with basic description
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/9a9bacb0-9e28-4fc9-96e8-9aaf4d771b40)
 
+## Open Candidate Management
+Newly registered open candidates are shown here which are then judged and published to global candidate showcase by the recruiters.
+![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/e8c97cb2-97eb-4cd2-b133-f5230327c436)
+
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/e1078e54-ee3a-495e-aa9b-1260c9d94029)
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/9a38d0a0-7ff7-4d8a-908d-285d965a1d9a)
 
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/f3c4258d-efb8-4976-83a1-72f5f8666639)
-![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/e8c97cb2-97eb-4cd2-b133-f5230327c436)
+
 
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/35dd583a-257a-4f7b-8364-93ec2a7d9864)
 ![image](https://github.com/XERON431/Taskphin-Recruitment-Assistance-Tool/assets/103522839/5374819a-e907-4034-9c5c-710a5badc773)
