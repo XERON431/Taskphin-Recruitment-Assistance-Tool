@@ -9,7 +9,7 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 - [Installation](#installation)
 - [Architecture](#architecture)
 - [Technologies](#technologies)
-- [Future Scope](#futurescope)
+- [Future Scope](#future-scope)
 
 
 ## Features
