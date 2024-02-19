@@ -32,7 +32,7 @@ const CreatorRoute = ({ children }) => {
   return (
     <>
       {!ok ? (
-       <h1>error</h1>
+       <h1></h1>
       ) : (
         <div className="container-fluid">
           <div className="row">
