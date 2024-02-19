@@ -15,7 +15,7 @@ app.prepare()
       server.use(
         '/api',
         createProxyMiddleware({
-          target: 'http://localhost:8001', // Your server address
+          target: 'https://recruitment-assistance-webapp.onrender.com', // Your server address
           changeOrigin: true,
         })
       );
