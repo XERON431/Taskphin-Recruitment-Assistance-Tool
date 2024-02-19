@@ -29,7 +29,7 @@ const StudentRoute = ({ children }) => {
   return (
     <>
       {ok ? (
-       <h1>error</h1>
+       <h1></h1>
       ) : (
         <div className="container-fluid">
           {children}
