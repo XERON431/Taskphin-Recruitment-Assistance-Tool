@@ -60,7 +60,15 @@ Recruitment Assistance is an all-purpose recruitment solution designed to stream
 
 
 ## Installation
+I have deployed the backend on render so for running the Website on localhost only frontend installation is needed
+### Install Dependencies
+- cd client
+- npm install
+### Start the Program
+- npm run dev
 
+For running both frontend and backend on localhost, change line number 18 on client/server.js  target: 'https://recruitment-assistance-webapp.onrender.com' -> target: 'http://localhost:8001'
+then 
 ### Install Dependencies
 - cd recruitment-assistance/client
 - npm install
