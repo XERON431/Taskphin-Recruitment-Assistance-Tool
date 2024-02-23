@@ -53,8 +53,8 @@ readdirSync(routesPath).forEach((file) => {
 
 // CSRf
 
-// Error handling middleware
-// app.use(csrfProtection);
+Error handling middleware
+app.use(csrfProtection);
 
 app.get("/api/csrf-token", (req, res) => {
   res.json({ csrfToken: req.csrfToken() });
